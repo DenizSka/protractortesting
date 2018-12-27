@@ -1,3 +1,4 @@
+
 exports.config = {
   seleniumAddress: 'http://localhost:4444/wd/hub',
 
@@ -5,7 +6,9 @@ exports.config = {
   capabilities: {
     browserName: 'chrome'
   },
+  // getPageTimeout: 100000,
   specs: ['01_ilkelanding.js'],
+  SELENIUM_PROMISE_MANAGER: false,
     // Options to be passed to Jasmine-node.
   jasmineNodeOpts: {
     showColors: true, // Use colors in the command line report.
