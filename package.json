@@ -1,19 +1,24 @@
 {
-  "name": "Ilke Testing Project",
+  "name": "protractortesting",
   "version": "1.0.0",
-  "description": "'new project'",
+  "description": "testing",
   "main": "index.js",
   "module": "main.js",
   "dependencies": {
     "esm": "^3.0.84"
   },
-  "devDependencies": {
-    "express": "*",
-    "http": "0.0.0"
-  },
+  "devDependencies": {},
   "scripts": {
-    "test": "'testing'"
+    "test": "no command"
   },
-  "author": "",
-  "license": "ISC"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DenizSka/protractortesting.git"
+  },
+  "author": "DenizSkantz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DenizSka/protractortesting/issues"
+  },
+  "homepage": "https://github.com/DenizSka/protractortesting#readme"
 }

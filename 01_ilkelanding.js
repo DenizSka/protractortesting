@@ -1,6 +1,6 @@
 // can not import Base Page? .loaded function is built in but it is not working.
-import basePage from './Base';
-// const basePage = require('./Base');
+// import basePage from './Base';
+const basePage = require('./Base');
 const dashboard = $$('.navbar-toggler');
 const dropdown = $$('#navbarToggleExternalContent');
 
