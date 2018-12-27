@@ -1,0 +1,19 @@
+{
+  "name": "Ilke Testing Project",
+  "version": "1.0.0",
+  "description": "'new project'",
+  "main": "index.js",
+  "module": "main.js",
+  "dependencies": {
+    "esm": "^3.0.84"
+  },
+  "devDependencies": {
+    "express": "*",
+    "http": "0.0.0"
+  },
+  "scripts": {
+    "test": "'testing'"
+  },
+  "author": "",
+  "license": "ISC"
+}
