@@ -7,6 +7,8 @@ const dropdown = $$('#navbarToggleExternalContent');
 const publications = element.all(by.css('.nav-link')).get(1);
 const publiPageTitle = $$('.publi-title');
 const publiImages = $('iframe');
+const publiView = $$('.publibutton');
+const backButton = $$('.btn btn-light');
 const casual = require('casual');
 
 describe('homepage testing the following:', () => {
@@ -28,7 +30,8 @@ describe('homepage testing the following:', () => {
   });
   it('03_select a random publication and check if a single project page is working', async () => {
     let amount = casual.integer(0,10);
-
+    await publiView.get(amount).click();
+    expect (await backButton.isPresent()).toBe(true, 'Single publication is visible');
   });
   it('04_go to the projects page and check if page is loading');
   it('05_select a random project click view and see if the page is loading');
