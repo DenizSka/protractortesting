@@ -7,6 +7,7 @@
   "dependencies": {
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.7.0",
+    "casual": "^1.5.19",
     "esm": "^3.0.84"
   },
   "devDependencies": {},

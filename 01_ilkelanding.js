@@ -6,6 +6,8 @@ const dashboard = $$('.navbar-toggler');
 const dropdown = $$('#navbarToggleExternalContent');
 const publications = element.all(by.css('.nav-link')).get(1);
 const publiPageTitle = $$('.publi-title');
+const publiImages = $('iframe');
+const casual = require('casual');
 
 describe('homepage testing the following:', () => {
 
@@ -18,11 +20,16 @@ describe('homepage testing the following:', () => {
    expect (await dropdown.isPresent()).toBe(true, 'Dropdown is not present');
   });
 
-  it('02_select publications and check it the project images are showing', async () => {
+  it('02_select publications and check if the images are showing', async () => {
     await publications.click();
     expect (await publiPageTitle.isPresent()).toBe(true, 'Headline is visible');
+    expect (await publiImages.isPresent()).toBe(true, 'Images are visible');
+    // await publiImages.count();
   });
-  it('03_select a random publication and check if a single project page is working');
+  it('03_select a random publication and check if a single project page is working', async () => {
+    let amount = casual.integer(0,10);
+
+  });
   it('04_go to the projects page and check if page is loading');
   it('05_select a random project click view and see if the page is loading');
   it('06_check if exam results page is loading');
