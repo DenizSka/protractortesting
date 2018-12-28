@@ -16,7 +16,8 @@
     "babel-cli": "^6.26.0",
     "eslint": "^5.11.1",
     "eslint-config-airbnb-base": "^13.1.0",
-    "eslint-plugin-import": "^2.14.0"
+    "eslint-plugin-import": "^2.14.0",
+    "protractor-browser-logs": "^1.0.352"
   },
   "scripts": {
     "test": "no command"

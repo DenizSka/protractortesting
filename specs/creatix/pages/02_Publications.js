@@ -1,5 +1,4 @@
-const dashboard = $$('.navbar-toggler');
-const dropdown = $$('#navbarToggleExternalContent');
+
 const publications = element.all(by.css('.nav-link')).get(1);
 const publiPageTitle = $$('.publi-title');
 const publiImages = $('iframe');
@@ -20,13 +19,4 @@ describe('Publications testing the following:', () => {
     await publiView.get(amount).click();
     expect (await backButton.isPresent()).toBe(true, 'Single publication is visible');
   });
-  it('04_go to the projects page and check if page is loading');
-  it('05_select a random project click view and see if the page is loading');
-  it('06_check if exam results page is loading');
-  it('07_check if contact me is loading');
-
-// admin page tests
-  it('07_login as admin, get the admin dashboard and get the admin dropdown menu');
-
-
 });
