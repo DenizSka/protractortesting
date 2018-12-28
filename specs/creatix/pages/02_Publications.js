@@ -8,13 +8,13 @@ const casual = require('casual');
 
 describe('Publications testing the following:', () => {
 
-  it('02_select publications and check if the images are showing', async () => {
+  xit('02_select publications and check if the images are showing', async () => {
     await publications.click();
     expect (await publiPageTitle.isPresent()).toBe(true, 'Headline is visible');
     expect (await publiImages.isPresent()).toBe(true, 'Images are visible');
     // await publiImages.count();
   });
-  it('03_select a random publication and check if a single project page is working', async () => {
+  xit('03_select a random publication and check if a single project page is working', async () => {
     let amount = casual.integer(0,10);
     await publiView.get(amount).click();
     expect (await backButton.isPresent()).toBe(true, 'Single publication is visible');

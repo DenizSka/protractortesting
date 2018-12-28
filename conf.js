@@ -2,7 +2,6 @@
 exports.config = {
   onPrepare: function () {
     browser.waitForAngularEnabled(false);
-
     let browserLogs = require('protractor-browser-logs'),
       logs = browserLogs(browser);
 
@@ -21,9 +20,9 @@ exports.config = {
       logs.ignore(logs.or(logs.INFO, logs.DEBUG));
     });
 
-    afterEach(function () {
-      return logs.verify();
-    });
+    // afterEach(function () {
+    //   return logs.verify();
+    // });
   },
   seleniumAddress: 'http://localhost:4444/wd/hub',
   // Capabilities to be passed to the webdriver instance.
