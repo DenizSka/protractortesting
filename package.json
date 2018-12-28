@@ -5,12 +5,19 @@
   "main": "index.js",
   "module": "main.js",
   "dependencies": {
-    "babel-cli": "^6.26.0",
+    "@babel/core": "^7.2.2",
     "babel-preset-env": "^1.7.0",
     "casual": "^1.5.19",
     "esm": "^3.0.84"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "@babel/node": "^7.2.2",
+    "@babel/preset-env": "^7.2.3",
+    "babel-cli": "^6.26.0",
+    "eslint": "^5.11.1",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0"
+  },
   "scripts": {
     "test": "no command"
   },
