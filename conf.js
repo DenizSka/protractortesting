@@ -35,7 +35,8 @@ exports.config = {
   //   'specs/creatix/pages/01_Homepage.js'
   //   ]
   // },
-  specs: ['specs/creatix/pages/*'],
+  specs: ['specs/creatix/pages/*',
+  'specs/creatix/admin/*'],
   SELENIUM_PROMISE_MANAGER: false,
     // Options to be passed to Jasmine-node.
   jasmineNodeOpts: {
