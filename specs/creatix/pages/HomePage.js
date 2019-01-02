@@ -1,9 +1,9 @@
 // import { browser } from 'protractor';
 
 
-export default class HomePage {
+class HomePage {
   constructor() {
-    this.aboutMeLink = $('.body > div.aboutme > h1');
+    this.aboutMeLink = $('body > div.aboutme > h1');
     this.navbar = $('.navbar-toggler');
     this.loginButton = $('#navbarToggleExternalContent > div > a:nth-child(5)');
     // this.dropdown = $('#navbarToggleExternalContent');
@@ -34,3 +34,5 @@ export default class HomePage {
     await this.clickLoginButton();
   }
 }
+
+export default new HomePage();
