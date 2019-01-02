@@ -1,16 +1,24 @@
+require('babel-core/register');
 
 exports.config = {
-  onPrepare: function () {
+  framework: 'jasmine2',
+
+  onPrepare: async () => {
+    await browser.manage().window().setSize(1400, 900);
+    await browser.manage().timeouts().implicitlyWait(5000);
     browser.waitForAngularEnabled(false);
-    let browserLogs = require('protractor-browser-logs'),
-      logs = browserLogs(browser);
+    global.EC = protractor.ExpectedConditions;
+    const browserLogs = require('protractor-browser-logs');
+
+
+    const logs = browserLogs(browser);
 
     if (global.logs) {
       throw new Error('Oops, name is already reserved!');
     }
     global.logs = logs;
 
-    beforeEach(function () {
+    beforeEach(() => {
       logs.reset();
 
       // You can put here all expected generic expectations.
@@ -24,10 +32,22 @@ exports.config = {
     //   return logs.verify();
     // });
   },
-  seleniumAddress: 'http://localhost:4444/wd/hub',
+  directConnect: true,
   // Capabilities to be passed to the webdriver instance.
   capabilities: {
-    browserName: 'chrome'
+    browserName: 'chrome',
+  },
+  chromeOptions: {
+    args: [
+      '--disable-infobars',
+      '--disable-extensions',
+      'verbose',
+      // '--headless',
+      '--disable-gpu',
+      '--no-sandbox',
+      '--disable-web-security',
+      '--test-type=browser',
+    ],
   },
   // getPageTimeout: 100000,
   // suite:{
@@ -35,16 +55,13 @@ exports.config = {
   //   'specs/creatix/pages/01_Homepage.js'
   //   ]
   // },
-  specs: ['specs/creatix/pages/*',
-  'specs/creatix/admin/*'],
+  specs: [
+    'specs/creatix/pages/*',
+    'specs/creatix/admin/*',
+  ],
   SELENIUM_PROMISE_MANAGER: false,
-    // Options to be passed to Jasmine-node.
+  // Options to be passed to Jasmine-node.
   jasmineNodeOpts: {
     showColors: true, // Use colors in the command line report.
-  }
+  },
 };
-
-
-
-
-

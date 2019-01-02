@@ -2,6 +2,7 @@
 // import app from '../../../app';
 // const basePage = require('./Base');
 
+
 const navbar = $$('.navbar-toggler');
 const dropdown = $$('#navbarToggleExternalContent');
 
