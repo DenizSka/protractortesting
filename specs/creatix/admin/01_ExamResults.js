@@ -1,5 +1,4 @@
 const collapsed = $('.btn.btn-link.collapsed');
-const logout = $('.btn.btn-danger');
 const addExam = $$('.btn.btn-light').first();
 const examPage = $('.publiname');
 const inputs = $$('.form-control');
