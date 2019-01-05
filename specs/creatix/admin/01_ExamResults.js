@@ -8,7 +8,7 @@ const inputs = $$('.form-control');
 const submit = $('[value=\'Submit!\']');
 const edit = $('[value=\'Edit!\']');
 const results = $('.headline');
-const tablerows = element.all(by.css('table.table-hover tbody tr'));
+const tablerows = element.all(by.css('table.table-hover tbody tr'));;
 const editButtons = element.all(by.css('.btn.btn-primary'));
 const deleteLast = $$('[value=\'Delete\']').last();
 
@@ -24,7 +24,7 @@ describe('01_Admin Adding Exam Results:', () => {
     await browser.get('http://www.ilkeciritci.com/exam-results/admin');
     browser.wait(EC.visibilityOf(results), 5000);
     numberBefore = tablerows.count();
-    console.log(numberBefore);
+    console.log(`this is number before: ${numberBefore}`);
     expect(await results.isPresent()).toBe(true, 'Edit/View Exam page is not present');
   });
   it('02_Go Back to dashboard and click on add new exam from dashboard and get to the add page', async () => {
