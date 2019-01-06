@@ -1,5 +1,5 @@
-import HomePage from '../pages/HomePage';
-const aboutMeLink = $('.writingtitle');
+import homePage from '../pages/HomePage';
+// const aboutMeLink = $('.writingtitle');
 
 const loginButton = $('#navbarToggleExternalContent > div > a:nth-child(5)');
 const navbar = $('.navbar-toggler');
@@ -15,16 +15,16 @@ const adminPanel = $('#navbarToggleExternalContent > div > a:nth-child(7)');
 
 describe('00_Admin Dashboard testing:', () => {
 
-  // it('verify the home page works', async () => {
-  //   await browser.get('http://www.ilkeciritci.com');
-  //   expect(await HomePage.getAboutMe()).toEqual('ABOUT ME');
-  // });
-  //
-  it('01_Verify the home page works', async () => {
+  it('verify the home page works', async () => {
     await browser.get('http://www.ilkeciritci.com');
-    // console.log(`about me: ${JSON.stringify(aboutMeLink)}`);
-    expect(await aboutMeLink.getText()).toEqual('ABOUT ME');
+    expect(await homePage.getAboutMe()).toEqual('ABOUT ME');
   });
+  //
+  // it('01_Verify the home page works', async () => {
+  //   await browser.get('http://www.ilkeciritci.com');
+  //   // console.log(`about me: ${JSON.stringify(aboutMeLink)}`);
+  //   expect(await aboutMeLink.getText()).toEqual('ABOUT ME');
+  // });
   it('02_Click on dropdown menu and select login', async () => {
     await navbar.click();
     browser.wait(EC.visibilityOf(dropdown), 5000);

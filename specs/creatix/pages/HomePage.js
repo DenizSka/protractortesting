@@ -3,7 +3,8 @@
 
 class HomePage {
   constructor() {
-    this.aboutMeLink = $('body > div.aboutme > h1');
+    // this.aboutMeLink = $('body > div.aboutme > h1');
+    this.aboutMeLink = $('.writingtitle');
     this.navbar = $('.navbar-toggler');
     this.loginButton = $('#navbarToggleExternalContent > div > a:nth-child(5)');
     // this.dropdown = $('#navbarToggleExternalContent');
