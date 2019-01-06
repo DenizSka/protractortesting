@@ -7,6 +7,7 @@ class HomePage {
     this.aboutMeLink = $('.writingtitle');
     this.navbar = $('.navbar-toggler');
     this.loginButton = $('#navbarToggleExternalContent > div > a:nth-child(5)');
+    this.EC = protractor.ExpectedConditions;
     // this.dropdown = $('#navbarToggleExternalContent');
     // this.email = $('#exampleInputEmail1');
     // this.password = $('#exampleInputPassword1');
@@ -24,6 +25,7 @@ class HomePage {
     browser.wait(EC.elementToBeClickable(this.navbar), 5000);
     await this.navbar.click();
   }
+
 
   async clickLoginButton() {
     browser.wait(EC.elementToBeClickable(this.loginButton), 5000);

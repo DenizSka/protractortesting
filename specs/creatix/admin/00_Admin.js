@@ -1,11 +1,10 @@
 import homePage from '../pages/HomePage';
+import adminPage from './AdminPage';
 // const aboutMeLink = $('.writingtitle');
-
-const loginButton = $('#navbarToggleExternalContent > div > a:nth-child(5)');
+// const loginButton = $('#navbarToggleExternalContent > div > a:nth-child(5)');
 const navbar = $('.navbar-toggler');
-const dropdown = $('#navbarToggleExternalContent');
 const email = $('#exampleInputEmail1');
-const password = $('#exampleInputPassword1');
+const dropdown = $('#navbarToggleExternalContent');
 const submit = $('[value=\'Log In\']');
 const collapsed = $('.btn.btn-link.collapsed');
 const logout = $('.btn.btn-danger');
@@ -26,16 +25,15 @@ describe('00_Admin Dashboard testing:', () => {
   //   expect(await aboutMeLink.getText()).toEqual('ABOUT ME');
   // });
   it('02_Click on dropdown menu and select login', async () => {
-    await navbar.click();
-    browser.wait(EC.visibilityOf(dropdown), 5000);
-    expect(await dropdown.isPresent()).toBe(true, 'dropdown navigation is not loaded' );
-    await loginButton.click();
+    // await homePage.clickNavBar();
+    // browser.wait(EC.visibilityOf(dropdown), 5000);
+    // expect(await dropdown.isPresent()).toBe(true, 'dropdown navigation is not loaded' );
+    await homePage.loginToAdmin();
     expect (await email.isPresent()).toBe(true, 'login page is not loaded');
 
   });
   it('03_Put in the admin credentials and expect the page to be loaded', async () => {
-    await email.sendKeys('admin@admin.com');
-    await password.sendKeys('hello123');
+    await adminPage.sendCredentials();
     await submit.click();
     expect(await collapsed.isPresent()).toBe(true, 'Admin Dashboard is not present');
   });
