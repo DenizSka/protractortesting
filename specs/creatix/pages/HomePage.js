@@ -8,12 +8,7 @@ class HomePage {
     this.navbar = $('.navbar-toggler');
     this.loginButton = $('#navbarToggleExternalContent > div > a:nth-child(5)');
     this.EC = protractor.ExpectedConditions;
-    // this.dropdown = $('#navbarToggleExternalContent');
-    // this.email = $('#exampleInputEmail1');
-    // this.password = $('#exampleInputPassword1');
-    // this.submit = $('[value=\'Log In\']');
-    // this.collapsed = $('.btn.btn-link.collapsed');
-    // this.logout = $('.btn.btn-danger');
+
   }
 
   async getAboutMe() {
@@ -23,13 +18,13 @@ class HomePage {
 
   async clickNavBar() {
     browser.wait(EC.elementToBeClickable(this.navbar), 5000);
-    await this.navbar.click();
+    return this.navbar.click();
   }
 
 
   async clickLoginButton() {
     browser.wait(EC.elementToBeClickable(this.loginButton), 5000);
-    await this.loginButton.click();
+    return this.loginButton.click();
   }
 
   async loginToAdmin() {
