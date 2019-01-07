@@ -21,7 +21,6 @@ class AdminPage {
 
   async editExamButton(){
     await this.editExam.click();
-    await browser.get('http://www.ilkeciritci.com/exam-results/admin');
   }
 
   async addExamButton(){

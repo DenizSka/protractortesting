@@ -17,6 +17,7 @@ describe('01_Admin Adding Exam Results:', () => {
   it('01_Click on view/edit new exam from dashboard and check the count', async () => {
     expect(await collapsed.isPresent()).toBe(true, 'Dashboard is not present');
     await adminPage.editExamButton();
+    await browser.get('http://www.ilkeciritci.com/exam-results/admin');
     numberBefore = tablerows.count();
     console.log(`this is number before: ${numberBefore}`);
     expect(await results.isPresent()).toBe(true, 'Edit/View Exam page is not present');
